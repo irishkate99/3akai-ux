@@ -1507,7 +1507,6 @@ sdata.container.registerForLoad("sakai.contentmedia");
 
 //KATE'S NEW DIALOG BOX CODE
 $().ready(function() {
-  $('#contentmedia_dialog_link').jqm();
-  $('#contentmedia_dialog_link').jqmShow();
+  $('#contentmedia_dialog_link').jqm({trigger: "#contentmedia_actions_link"});
 });
 

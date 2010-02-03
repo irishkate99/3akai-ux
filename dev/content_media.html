@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Sakai 3 R&amp;D - Content &amp; Media</title>
-	
+
 	<link rel="stylesheet" type="text/css" href="_css/FSS/fluid.reset.css" />
 	<link rel="stylesheet" type="text/css" href="_css/FSS/fluid.theme.mist.css" />
 	<link rel="stylesheet" type="text/css" href="_css/FSS/fluid.theme.hc.css" />
@@ -16,7 +16,7 @@
 	<link type="text/css" rel="stylesheet" href="/devwidgets/chat3/css/chat.css"/>
 	<link rel="stylesheet" type="text/css" href="_lib/JsTree/tree_component.css" />
 	<link rel="stylesheet" type="text/css" href="_css/sakai/sakai.base.css" />
-	
+
 	<script type="text/javascript" language="JavaScript" src="_configuration/widgets.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_configuration/config.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_lib/Fluid/InfusionAll.js"></script>
@@ -33,35 +33,35 @@
 	<script type="text/javascript" language="JavaScript" src="_lib/JsTree/css.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_lib/Fluid/ProgressiveEnhancement.js"></script>
 	<script type="text/javascript" language="JavaScript" src="_lib/sakai_util/querystring.js"></script>
-	
+
 </head>
 <body id="root" class="fl-centered fl-container i18nable contentmedia-container">
-    <!-- EXPLORE BAR -->
-    <div id="widget_chat3" class="widget_inline">
-    </div>
-    <!-- CONTENT -->
-    <div class="fl-container fl-fix fl-container-flex content contentmedia_content" style="display:none">
-        <div class="fl-fix fl-centered fixed-container">
-            <div class="decor"><!-- -->
-            </div>
-            <!-- TITLE --><h1 class="title">Find, browse and manage resources</h1>
-            <!-- CONTENT -->
-            <div class="fl-centered fl-container fl-tab-content contentmedia_content_wrapper">
-                <div class="contentmedia_tab_content_top">
-                    <div class="contentmedia_tab_content_top_inner">
-                    	<!-- -->
-                    </div>
-                </div>
-                <div class="contentmedia_content_main">
-                    <div id="contentmedia_drop_message"></div>
-					<div id="contentmedia_drop_message_template"><!-- 
-						${count} 
+		<!-- EXPLORE BAR -->
+		<div id="widget_chat3" class="widget_inline">
+		</div>
+		<!-- CONTENT -->
+		<div class="fl-container fl-fix fl-container-flex content contentmedia_content" style="display:none">
+				<div class="fl-fix fl-centered fixed-container">
+						<div class="decor"><!-- -->
+						</div>
+						<!-- TITLE --><h1 class="title">Find, browse and manage resources</h1>
+						<!-- CONTENT -->
+						<div class="fl-centered fl-container fl-tab-content contentmedia_content_wrapper">
+								<div class="contentmedia_tab_content_top">
+										<div class="contentmedia_tab_content_top_inner">
+											<!-- -->
+										</div>
+								</div>
+								<div class="contentmedia_content_main">
+										<div id="contentmedia_drop_message"></div>
+					<div id="contentmedia_drop_message_template"><!--
+						${count}
 						{if count == 1}
 						file has
 						{else}
 						files have
 						{/if}
-						 been added to 
+						 been added to
 						{if kind == "tag"}
 						the "${dropped}" tag.
 						{else}
@@ -89,23 +89,23 @@
 									</a>
 								</form>
 							</div>
-					
+
 							<a href="javascript:;" title="Browse by folders" id="contentmedia_folders_trigger">Browse by folders</a>
 							<div id="contentmedia_folders">
-								
+
 							</div>
-							
+
 							<a href="javascript:;" title="Filter by tag">Filter by tag</a>
 							<div id="contentmedia_accordion_list_tag">
 								<div class="contentmedia_accordion_list_tag_top">
-									<a href="javascript:;">A</a> <a href="javascript:;">B</a> <a href="javascript:;">C</a> <a href="javascript:;">D</a> 
-									<a href="javascript:;">E</a> <a href="javascript:;">F</a> <a href="javascript:;">G</a> <a href="javascript:;">H</a> <a href="javascript:;">I</a> 
-									<a href="javascript:;">J</a> <a href="javascript:;">K</a> <a href="javascript:;">L</a> <a href="javascript:;">M</a> <a href="javascript:;">N</a> 
-									<a href="javascript:;">O</a> <a href="javascript:;">P</a> <a href="javascript:;">Q</a> <a href="javascript:;">R</a> <a href="javascript:;">S</a> 
-									<a href="javascript:;">T</a> <a href="javascript:;">U</a> <a href="javascript:;">V</a> <a href="javascript:;">W</a> <a href="javascript:;">X</a> 
+									<a href="javascript:;">A</a> <a href="javascript:;">B</a> <a href="javascript:;">C</a> <a href="javascript:;">D</a>
+									<a href="javascript:;">E</a> <a href="javascript:;">F</a> <a href="javascript:;">G</a> <a href="javascript:;">H</a> <a href="javascript:;">I</a>
+									<a href="javascript:;">J</a> <a href="javascript:;">K</a> <a href="javascript:;">L</a> <a href="javascript:;">M</a> <a href="javascript:;">N</a>
+									<a href="javascript:;">O</a> <a href="javascript:;">P</a> <a href="javascript:;">Q</a> <a href="javascript:;">R</a> <a href="javascript:;">S</a>
+									<a href="javascript:;">T</a> <a href="javascript:;">U</a> <a href="javascript:;">V</a> <a href="javascript:;">W</a> <a href="javascript:;">X</a>
 									<a href="javascript:;">Y</a> <a href="javascript:;">Z</a>
 								</div>
-								
+
 								<div class="contentmedia_accordion_list">
 									<a href="javascript:;"><span>Animals</span> (1)</a>
 									<a href="javascript:;"><span>Barcelona</span> (23)</a>
@@ -118,11 +118,11 @@
 									<a href="javascript:;"><span>Zoo</span> (1)</a>
 								</div>
 							</div>
-				
+
 							<a href="javascript:;" title="Filter by site">Filter by site</a>
 							<div id="contentmedia_accordion_list_site">
 							</div>
-							
+
 							<!--NEW FILTER OPTION. KM.-->
 							<a href="javascript:;" title="Filter by repository">Filter by repository</a>
 							<!--NEEDS TO BE UPDATED TO LIST REPOSITORIES ASSOCIATED WITH RESOURCE. km.-->
@@ -142,12 +142,12 @@
 							</div>
 							<br>&nbsp;<br>
 							<br>&nbsp;<br>
-							
+
 							<a href="javascript:;" title="Upload new files" id="contentmedia_uploader_trigger">Upload new resource(s)</a>
 							<div id="uploader-contents">
 								<p style="font-size: .8em;">Where would you like to save the resource(s)?</p>
 								<!--NEEDS TO BE UPDATED TO LIST REPOSITORIES ASSOCIATED WITH RESOURCE. reused in filter by and link to sections. km.-->
-								<div class="menu" id="contentmedia_repository_list"> 
+								<div class="menu" id="contentmedia_repository_list">
 									<ul>
 									<li><a href="javascript:;">Select a repository<!--[if IE 7]><!--></a><!--<![endif]-->
 									<!--[if lte IE 6]><table><tr><td><![endif]-->
@@ -160,100 +160,100 @@
 									<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 									</li>
 									</ul>
-								</div>      
-				
+								</div>
+
 								<br>
-						        <!-- This form will be progressively enhanced by the Fluid Uploader component. -->
-						        <form method="post" enctype="multipart/form-data" class="fl-uploader fl-progEnhance-basic">
-						            <p>Browse to upload a resource.</p>
-						            <input name="fileData" type="file" />
-						            <div><input type="submit" value="Save"/></div>
-						        </form>
-						        
-						        <!-- This is the markup for the Fluid Uploader component itself. -->
-						        <form class="flc-uploader fl-uploader fl-progEnhance-enhanced" 
-						              method="get" 
-						              enctype="multipart/form-data">
-						                  
-						            <!-- The file queue -->
-						            <div class="fl-uploader-queue-wrapper">
-						                
-						                <!-- Top of the queue -->
-						                <div class="fl-uploader-queue-header">
-						                    <table cellspacing="0" cellpadding="0" summary="Headers for the file queue.">
-						                        <caption>Resource Upload Queue:</caption>
-						
-						                            <tr>
-						                                <th scope="col" class="fl-uploader-file-name">Resource Name</th>
-						                                <th scope="col" class="fl-uploader-file-size">Size&nbsp;&nbsp;</th>
-						                                <th scope="col" class="fl-uploader-file-actions">&nbsp;</th>
-						                            </tr>
-						
-						                    </table>
-						                </div>
-						                
-						                <!-- Scrollable view -->
-						                <div class="flc-scroller fl-scroller">
-						                    <div class="fl-scroller-inner">
-						                        <table cellspacing="0" class="flc-uploader-queue fl-uploader-queue" summary="Queue of files to upload.">
-						                            <tbody>
-						                                <!-- Rows will be rendered in here. -->
-						                                
-						                                <!-- Template markup for the file queue rows -->
-						                                <tr class="flc-uploader-file-tmplt flc-uploader-file fl-uploader-hidden-templates">
-						                                    <th class="flc-uploader-file-name fl-uploader-file-name" scope="row">Resource Name Placeholder</th>
-						                                    <td class="flc-uploader-file-size fl-uploader-file-size">0 KB</td>
-						                                    <td class="fl-uploader-file-actions">
-						                                        <button type="button" class="flc-uploader-file-action fl-uploader-file-action" title="Remove File" tabindex="-1">
-						                                            <span class="fl-uploader-button-text fl-uploader-hidden">Remove resource(s) from queue</span>
-						                                        </button>
-						                                    </td>
-						                                </tr>
-						                                
-						                                <!-- Template for the file error info rows -->
-						                                <tr class="flc-uploader-file-error-tmplt fl-uploader-file-error fl-uploader-hidden-templates">
-						                                    <td colspan="3" class="flc-uploader-file-error"></td>
-						                                </tr>
-						                            </tbody>
-						                        </table>
-						                        <div class="flc-uploader-file-progressor-tmplt fl-uploader-file-progress"><span class="fl-uploader-file-progress-text fl-uploader-hidden">76%</span></div>
-						                    </div>
-						                </div>
-						                
-						                <div class="flc-uploader-browse-instructions fl-uploader-browse-instructions">
-						                    Click <em>Browse</em> to add resources to the queue 
-						                </div>
-						    
-						                <!-- Foot of the queue -->
-						                <div class="flc-uploader-queue-footer fl-uploader-queue-footer">
-						                    <table cellspacing="0" cellpadding="0" summary="Status of file queue.">
-						
-						                            <tr>
-						                                <td class="flc-uploader-total-progress-text">
-						                                    Total: <span class="fl-uploader-totalFiles">0</span> resources<br>
-						                                    (<span class="fl-uploader-totalBytes">0 KB</span>)
-						                                </td>
-						                                <td class=".fl-uploader-footer-buttons" align="right" >
-						                                    <a href="#" class="flc-uploader-button-browse fl-uploader-browse">Browse</a>
-						                                </td>
-						                            </tr>
-						
-						                    </table>
-						                    <div class="flc-uploader-total-progress fl-uploader-total-progress-okay">&nbsp;</div>
-						                </div>
-						            </div>
-						            
-						            <!-- Action buttons -->
-						            <div class="fl-uploader-btns">
-						                <button type="button" class="flc-uploader-button-pause fl-uploader-pause fl-uploader-hidden">Stop Upload</button><button type="button" class="flc-uploader-button-upload fl-uploader-upload fl-uploader-button-default fl-uploader-dim" disabled="disabled">Upload</button>
-						            </div>
-						        </form>
-						    </div>
-						    <a title="link to a resource on the web" id="contentmedia_actions_link" href="javascript:;">Link to a resource on the Web</a>
+										<!-- This form will be progressively enhanced by the Fluid Uploader component. -->
+										<form method="post" enctype="multipart/form-data" class="fl-uploader fl-progEnhance-basic">
+												<p>Browse to upload a resource.</p>
+												<input name="fileData" type="file" />
+												<div><input type="submit" value="Save"/></div>
+										</form>
+
+										<!-- This is the markup for the Fluid Uploader component itself. -->
+										<form class="flc-uploader fl-uploader fl-progEnhance-enhanced"
+													method="get"
+													enctype="multipart/form-data">
+
+												<!-- The file queue -->
+												<div class="fl-uploader-queue-wrapper">
+
+														<!-- Top of the queue -->
+														<div class="fl-uploader-queue-header">
+																<table cellspacing="0" cellpadding="0" summary="Headers for the file queue.">
+																		<caption>Resource Upload Queue:</caption>
+
+																				<tr>
+																						<th scope="col" class="fl-uploader-file-name">Resource Name</th>
+																						<th scope="col" class="fl-uploader-file-size">Size&nbsp;&nbsp;</th>
+																						<th scope="col" class="fl-uploader-file-actions">&nbsp;</th>
+																				</tr>
+
+																</table>
+														</div>
+
+														<!-- Scrollable view -->
+														<div class="flc-scroller fl-scroller">
+																<div class="fl-scroller-inner">
+																		<table cellspacing="0" class="flc-uploader-queue fl-uploader-queue" summary="Queue of files to upload.">
+																				<tbody>
+																						<!-- Rows will be rendered in here. -->
+
+																						<!-- Template markup for the file queue rows -->
+																						<tr class="flc-uploader-file-tmplt flc-uploader-file fl-uploader-hidden-templates">
+																								<th class="flc-uploader-file-name fl-uploader-file-name" scope="row">Resource Name Placeholder</th>
+																								<td class="flc-uploader-file-size fl-uploader-file-size">0 KB</td>
+																								<td class="fl-uploader-file-actions">
+																										<button type="button" class="flc-uploader-file-action fl-uploader-file-action" title="Remove File" tabindex="-1">
+																												<span class="fl-uploader-button-text fl-uploader-hidden">Remove resource(s) from queue</span>
+																										</button>
+																								</td>
+																						</tr>
+
+																						<!-- Template for the file error info rows -->
+																						<tr class="flc-uploader-file-error-tmplt fl-uploader-file-error fl-uploader-hidden-templates">
+																								<td colspan="3" class="flc-uploader-file-error"></td>
+																						</tr>
+																				</tbody>
+																		</table>
+																		<div class="flc-uploader-file-progressor-tmplt fl-uploader-file-progress"><span class="fl-uploader-file-progress-text fl-uploader-hidden">76%</span></div>
+																</div>
+														</div>
+
+														<div class="flc-uploader-browse-instructions fl-uploader-browse-instructions">
+																Click <em>Browse</em> to add resources to the queue
+														</div>
+
+														<!-- Foot of the queue -->
+														<div class="flc-uploader-queue-footer fl-uploader-queue-footer">
+																<table cellspacing="0" cellpadding="0" summary="Status of file queue.">
+
+																				<tr>
+																						<td class="flc-uploader-total-progress-text">
+																								Total: <span class="fl-uploader-totalFiles">0</span> resources<br>
+																								(<span class="fl-uploader-totalBytes">0 KB</span>)
+																						</td>
+																						<td class=".fl-uploader-footer-buttons" align="right" >
+																								<a href="#" class="flc-uploader-button-browse fl-uploader-browse">Browse</a>
+																						</td>
+																				</tr>
+
+																</table>
+																<div class="flc-uploader-total-progress fl-uploader-total-progress-okay">&nbsp;</div>
+														</div>
+												</div>
+
+												<!-- Action buttons -->
+												<div class="fl-uploader-btns">
+														<button type="button" class="flc-uploader-button-pause fl-uploader-pause fl-uploader-hidden">Stop Upload</button><button type="button" class="flc-uploader-button-upload fl-uploader-upload fl-uploader-button-default fl-uploader-dim" disabled="disabled">Upload</button>
+												</div>
+										</form>
+								</div>
+								<a title="link to a resource on the web" id="contentmedia_actions_link" href="javascript:;">Link to a resource on the Web</a>
 						</div>
-						
+
 					</div>
-					
+
 					<div id="contentmedia_main_right">
 							<div id="contentmedia_bar_right">
 								<a id="contentmedia_actions_view_list" href="javascript:;" title="List view">List view</a>|
@@ -261,7 +261,7 @@
 								<a id="contentmedia_actions_edit" href="javascript:;">Resource Settings</a>|
 								<a id="contentmedia_actions_remove" href="javascript:;">Remove Resource(s)</a>
 							</div>
-							
+
 							<!-- Filters -->
 							<div id="contentmedia_list_title"></div>
 							<div id="contentmedia_list_title_template"><!--
@@ -283,7 +283,7 @@
 											${context}
 										{/if}
 									{/if}
-									
+
 									{if site.length > 0 || context != "myfiles"}
 									<a href="javascript:;" id="contentmedia_remove_filter_context"><img src="/devwidgets/filemanager/images/remove_filter.png" alt=""/></a>
 									{/if}
@@ -309,7 +309,7 @@
 								{/if}
 							--></div>
 							<!-- Filters -->
-				
+
 							<div id="contentmedia_files_container"></div>
 							<div id="contentmedia_paging" class="jq_pager"></div>
 							<div id="contentmedia_files_container_template"><!--
@@ -343,7 +343,7 @@
 											{/if}
 										</div>
 									</div>
-									
+
 									<div class="contentmedia_fileinfo" id="contentmedia_fileinfo_${i_index}">
 										<p><strong>Tags:</strong></p>
 										<p>
@@ -402,20 +402,20 @@
 											{/if}
 										</p>
 									</div>
-									
+
 								{/for}
 							--></div>
 						</div>
-                </div>
-                <div class="contentmedia_tab_content_bottom">
-                    <div class="contentmedia_tab_content_bottom_inner">
-                    	<!-- -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	
+								</div>
+								<div class="contentmedia_tab_content_bottom">
+										<div class="contentmedia_tab_content_bottom_inner">
+											<!-- -->
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+
 	<div id="contentmedia_accordion_list_site_template"><!--
 		{if items.length > 0}
 		<div class="contentmedia_accordion_list">
@@ -429,12 +429,12 @@
 		{forelse}
 			No sites found
 		{/for}
-		
+
 		{if items.length > 0}
 		</div>
 		{/if}
 	--></div>
-	
+
 	<div id="contentmedia_accordion_list_repository_template"><!--
 		{if items.length > 0}
 		<div class="contentmedia_accordion_list">
@@ -448,15 +448,15 @@
 		{forelse}
 			No repositories found
 		{/for}
-		
+
 		{if items.length > 0}
 		</div>
 		{/if}
 	--></div>
-	
-    <!-- FOOTER WIDGET -->
+
+		<!-- FOOTER WIDGET -->
 	<div id="widget_footer_footercontainer" class="widget_inline footercontainer"></div>
-	
+
 	<div id="contentmedia_dialog_edit" class="dialog">
 		<div class="dialog_header">
 			<div class="dialog_header_inner">
@@ -465,15 +465,15 @@
 			</div>
 		</div>
 		<div class="contentmedia_dialog_body">
-			<a href="javascript:;" id="contentmedia_dialog_permissions_trigger">Visibility & Sharing</a> | 
+			<a href="javascript:;" id="contentmedia_dialog_permissions_trigger">Visibility & Sharing</a> |
 			<a href="javascript:;" id="contentmedia_dialog_associations_trigger">Tags</a>
-			
+
 			<div id="contentmedia_dialog_permissions">
 				<br clear="all"><p>Do you want other ALEX users to be able to see this resource in their Content & Media tab, and possibly reuse it?</p>
 				<form method="get" action="#">
 					<input type="radio" value="public" id="contentmedia_dialog_permissions_public" name="contentmedia_dialog_permissions_options" checked="checked" />
 					<label for="contentmedia_dialog_permissions_public">NOT Available to the ALEX Community</label><br />
-					
+
 					<input type="radio" value="sharepeople" id="contentmedia_dialog_permissions_sharepeople" name="contentmedia_dialog_permissions_options" />
 					<label for="contentmedia_dialog_permissions_sharepeople">Visible to the ALEX Community</label><br />
 					<div>
@@ -525,8 +525,8 @@
 					<input type="button" value="Done" />
 					</div>
 				</div>
-				
-			<br clear="all"><p><b>Note:</b> If you just uploaded multiple resources, these settings will apply to all of them. To adjust 
+
+			<br clear="all"><p><b>Note:</b> If you just uploaded multiple resources, these settings will apply to all of them. To adjust
 			individual settings, close this window then select a single resource and click Resource Settings at the top right.</p>
 		</div>
 	</div>
@@ -555,7 +555,7 @@
 			--></div>
 		</div>
 	</div>
-	
+
 	<!--new dialog to handle Link to a resource on the Web option. km.-->
 	<div id="contentmedia_dialog_link" class="dialog">
 		<div class="dialog_header">

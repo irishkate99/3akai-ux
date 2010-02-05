@@ -166,7 +166,7 @@ sakai.contentmedia = function(){
       var b = parseInt(bytes, 10);
       var s = suffixes || ['byte', 'bytes', 'KB', 'MB', 'GB'];
       if (isNaN(b) || b === 0) { return '0 ' + s[0]; }
-      if (b == 1)              { return '1 ' + s[0]; }
+      if (b === 1)              { return '1 ' + s[0]; }
       if (b < 1024)            { return  b.toFixed(2) + ' ' + s[1]; }
       if (b < 1048576)         { return (b / 1024).toFixed(2) + ' ' + s[2]; }
       if (b < 1073741824)      { return (b / 1048576).toFixed(2) + ' '+ s[3]; }

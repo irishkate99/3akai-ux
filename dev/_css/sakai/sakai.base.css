@@ -20,7 +20,7 @@
 
 
 /* ----------------------------------------------------------------------------
- *    GLOBAL RULES 
+ *    GLOBAL RULES
  * ----------------------------------------------------------------------------
  */
 
@@ -30,12 +30,12 @@ strings, and i18n will show the element. Typically this class is applied at body
 
 
 /* ----------------------------------------------------------------------------
- *    DIALOGS 
+ *    DIALOGS
  * ----------------------------------------------------------------------------
  */
 
 /* Dialog */
-.dialog{color:#333;display:none;left:50%;margin-left:-250px;position:absolute;top:12%;width:500px;}
+.dialog{background-color:#eee;color:#333;display:none;left:50%;margin-left:-250px;position:absolute;top:12%;width:500px;}
 .jqmOverlay{background-color:#000;}
 
 /* Dialog header */

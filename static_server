@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+# Run this script for a quick sling-less dev environment:
+#   ./static_server
+import SimpleHTTPServer
+SimpleHTTPServer.test()

@@ -145,11 +145,11 @@
 
 							<a href="javascript:;" title="Upload new files" id="contentmedia_uploader_trigger">Upload new resource(s)</a>
 							<div id="uploader-contents">
-								<p style="font-size: .8em;">Where would you like to save the resource(s)?</p>
+								
 								<!--NEEDS TO BE UPDATED TO LIST REPOSITORIES ASSOCIATED WITH RESOURCE. reused in filter by and link to sections. km.-->
 								<div class="menu" id="contentmedia_repository_list">
 									<ul>
-									<li><a href="javascript:;">Select a repository<!--[if IE 7]><!--></a><!--<![endif]-->
+									<li><a href="javascript:;">Select a repository:<!--[if IE 7]><!--></a><!--<![endif]-->
 									<!--[if lte IE 6]><table><tr><td><![endif]-->
 									<ul>
 									<li><a href="javascript:;">Repository 1</a></li>
@@ -161,11 +161,11 @@
 									</li>
 									</ul>
 								</div>
-
 								<br>
 										<!-- This form will be progressively enhanced by the Fluid Uploader component. -->
 										<form method="post" enctype="multipart/form-data" class="fl-uploader fl-progEnhance-basic">
-												<p>Browse to upload a resource.</p>
+												
+											<p>Browse to upload a resource.</p>
 												<input name="fileData" type="file" />
 												<div><input type="submit" value="Save"/></div>
 										</form>
@@ -566,12 +566,26 @@
 		</div>
 		<div class="contentmedia_dialog_body">
 			<form method="get" action="#">
-					<span>Where would you like to save this link?</span><br />
-					<div id="contentmedia_repository_list"></div>
-					<span>Enter the URL of the resource:</span><br />
-					<input type="text" value="http://wwww.sample.url/" class="input" id="link_url"/>
-					<span>Give this resource a name:</span><br />
-					<input type="text" value="Sample Name" class="input" id="link_name"/>
+					<p>Where would you like to save this link?
+					<div class="menu" id="contentmedia_repository_list">
+									<ul>
+									<li><a href="javascript:;">Select a repository<!--[if IE 7]><!--></a><!--<![endif]-->
+									<!--[if lte IE 6]><table><tr><td><![endif]-->
+									<ul>
+									<li><a href="javascript:;">Repository 1</a></li>
+									<li><a href="javascript:;">Repository 2</a></li>
+									<li><a href="javascript:;">Repository 3</a></li>
+									<li><a href="javascript:;">Repository 4</a></li>
+									</ul>
+									<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+									</li>
+									</ul>
+					</div></p>
+					<br>
+					<p>Enter the URL of the resource:<br>
+					<input type="text" value="http://wwww.sample.url/" class="input" id="link_url"/></p>
+					<p>Give this resource a name:<br />
+					<input type="text" value="Sample Name" class="input" id="link_name"/></p>
 					<input type="button" value="Cancel" href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog"/>
 					<!--clicking the following button should submit the form. km.-->
 					<input type="button" value="OK" href="javascript:;" />

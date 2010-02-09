@@ -1121,6 +1121,10 @@ sakai.contentmedia = function(){
       link_url: $("#link_url").val(),
       link_name: $("#link_name").val()
     };
+    if (!form.link_url || !form.link_name) {
+      alert("Please fill out both fields");
+      return;
+    }
     // Reset the form
     $("#link_url").val("");
     $("#link_name").val("");

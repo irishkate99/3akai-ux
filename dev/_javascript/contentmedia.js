@@ -1111,6 +1111,11 @@ sakai.contentmedia = function(){
     });
   });
 
+  /**
+   * Set up the link dialog
+   */
+  $('#contentmedia_dialog_link').jqm({trigger: "#contentmedia_actions_link"});
+
 
   ///////////////////////
   // Initial functions //
@@ -1505,10 +1510,4 @@ sakai.contentmedia = function(){
 
 sdata.container.registerForLoad("sakai.contentmedia");
 
-//KATE'S NEW DIALOG BOX CODE
-$().ready(function() {
-  setTimeout(function () {
-    $('#contentmedia_dialog_link').jqm({trigger: "#contentmedia_actions_link"});
-  }, 500);
-});
 

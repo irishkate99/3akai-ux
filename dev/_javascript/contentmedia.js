@@ -1115,6 +1115,18 @@ sakai.contentmedia = function(){
    * Set up the link dialog
    */
   $('#contentmedia_dialog_link').jqm({trigger: "#contentmedia_actions_link"});
+  $('#contentmedia_dialog_link input[value=OK]').live('click', function (e) {
+    // Grab the value from the form.
+    var form = {
+      link_url: $("#link_url").val(),
+      link_name: $("#link_name").val()
+    };
+    // Reset the form
+    $("#link_url").val("");
+    $("#link_name").val("");
+    // Hide the dialog
+    $('#contentmedia_dialog_link').jqmHide();
+  });
 
 
   ///////////////////////

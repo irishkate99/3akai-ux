@@ -1132,6 +1132,15 @@ sakai.contentmedia = function(){
     $('#contentmedia_dialog_link').jqmHide();
   });
 
+  // Style the dropdowns.
+  $("select.repository_list").uniform();
+  $.getJSON('_tests/dummyjson/searchRepositories.json', function (result) {
+    var repos = result.repos;
+    repos.unshift({id:null, name: "Select a Repository:"});
+    console.log(repos);
+    // $("select.repository_list")
+  });
+
 
   ///////////////////////
   // Initial functions //

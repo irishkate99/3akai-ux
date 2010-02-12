@@ -1145,7 +1145,7 @@ sakai.contentmedia = function(){
 
   // Style the dropdowns.
   $("select.repository_list").uniform();
-  $.getJSON('_tests/dummyjson/searchRepositories.json', function (result) {
+  $.getJSON('/dev/dummyjson/searchRepositories.json', function (result) {
     var repos = result.repos;
     repos.unshift({id:null, name: "Select a Repository:"});
     console.log(repos);

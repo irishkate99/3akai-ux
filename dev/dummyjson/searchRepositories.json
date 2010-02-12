@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "title": "Xythos",
+      "description": "Resources stored in the Xythos system",
+      "id": "xythos",
+    },
+    {
+      "title": "Repository 2",
+      "description": "Resources stored in Repo 2",
+      "id": "repo2",
+    },
+    {
+      "title": "Repository 3",
+      "description": "Resources stored in Repo 3",
+      "id": "repo3",
+    },
+    {
+      "title": "Repository 4",
+      "description": "Resources stored in Repo 4",
+      "id": "repo4",
+    },
+    {
+      "title": "Repository 5",
+      "description": "Resources stored in Repo 5",
+      "id": "repo5",
+    },
+  ],
+  "default": "xythos"
+}

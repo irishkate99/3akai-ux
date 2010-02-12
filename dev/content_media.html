@@ -457,26 +457,29 @@
 		<!-- FOOTER WIDGET -->
 	<div id="widget_footer_footercontainer" class="widget_inline footercontainer"></div>
 
-	<div id="contentmedia_dialog_edit" class="dialog">
-		<div class="dialog_header">
-			<div class="dialog_header_inner">
+	<div id="contentmedia_dialog_edit" class="dialog_settings">
+		<div class="dialog_settings_header">
+			<div class="dialog_settings_header_inner">
 				<h1>Resource Settings</h1>
 				<a href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog">Close Dialog</a>
 			</div>
 		</div>
-		<div class="contentmedia_dialog_body">
-			<a href="javascript:;" id="contentmedia_dialog_permissions_trigger">Visibility & Sharing</a> |
+		<div class="dialog_settings_content">
+			<div class="contentmedia_dialog_nav_container">
+			<a href="javascript:;" id="contentmedia_dialog_permissions_trigger">Visibility & Sharing</a>
 			<a href="javascript:;" id="contentmedia_dialog_associations_trigger">Tags</a>
+			</div>
 
 			<div id="contentmedia_dialog_permissions">
-				<br clear="all"><p>Do you want other ALEX users to be able to see this resource in their Content & Media tab, and possibly reuse it?</p>
+				<p>Do you want other ALEX users to be able to see this resource in their Content & Media tab, and possibly reuse it?</p>
 				<form method="get" action="#">
 					<input type="radio" value="public" id="contentmedia_dialog_permissions_public" name="contentmedia_dialog_permissions_options" checked="checked" />
 					<label for="contentmedia_dialog_permissions_public">NOT Available to the ALEX Community</label><br />
 
 					<input type="radio" value="sharepeople" id="contentmedia_dialog_permissions_sharepeople" name="contentmedia_dialog_permissions_options" />
 					<label for="contentmedia_dialog_permissions_sharepeople">Visible to the ALEX Community</label><br />
-					<div>
+					</div>
+					<div id="contentmedia_dialog_buttons">
 					<input type="button" value="Next" href="javascript:;" id="contentmedia_dialog_associations_trigger"/>
 					<input type="button" value="Prev" href="javascript:;" id="contentmedia_dialog_associations_trigger"/>
 					<input type="button" value="Cancel" href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog"/>
@@ -484,9 +487,9 @@
 					<input type="button" value="Done" />
 					</div>
 				</form>
-			</div>
 
 			<div id="contentmedia_dialog_associations" style="display:none;">
+				<div id="contentmedia_dialog_tag_container">
 				<div class="contentmedia_dialog_associations_select_container">
 					<div>Your Existing Tags</div>
 					<select id="contentmedia_dialog_associations_select_all" size="10" multiple="multiple">
@@ -517,19 +520,27 @@
 						<option value="/_tags/systemtag">systemtag</option>
 					</select>
 					</div>
-					<div>
+					<form><p style="margin-left:5px;">Create a new tag: <input type="textbox" id="new_tag" size="30"> <input type="button" value="Create" href="javascript:;"></p></form>
+				</div>
+					<div id="contentmedia_dialog_buttons">
 					<input type="button" value="Next" href="javascript:;" id="contentmedia_dialog_permissions_trigger"/>
 					<input type="button" value="Prev" href="javascript:;" id="contentmedia_dialog_associations_trigger"/>
 					<input type="button" value="Cancel" href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog"/>
 					<!--clicking the following button should submit the form. km.-->
 					<input type="button" value="Done" />
 					</div>
+					
 				</div>
 
 			<br clear="all"><p><b>Note:</b> If you just uploaded multiple resources, these settings will apply to all of them. To adjust
 			individual settings, close this window then select a single resource and click Resource Settings at the top right.</p>
 		</div>
+		<div class="dialog_footer">
+			<div class="dialog_footer_inner">
+			</div>
+		</div>
 	</div>
+	
 	<div id="contentmedia_dialog_remove" class="dialog">
 		<div class="dialog_header">
 			<div class="dialog_header_inner">

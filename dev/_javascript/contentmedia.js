@@ -1116,6 +1116,37 @@ sakai.contentmedia = function(){
     });
 
 
+    /**
+     * Set up the link dialog
+     */
+    $('#contentmedia_dialog_link').jqm({trigger: "#contentmedia_actions_link"});
+    $('#contentmedia_dialog_link input[value=OK]').live('click', function (e) {
+      // Grab the value from the form.
+      var form = {
+        link_url: $("#link_url").val(),
+        link_name: $("#link_name").val()
+      };
+      if (!form.link_url || !form.link_name) {
+        alert("Please fill out both fields");
+        return;
+      }
+      // Reset the form
+      $("#link_url").val("");
+      $("#link_name").val("");
+      // Hide the dialog
+      $('#contentmedia_dialog_link').jqmHide();
+    });
+
+    // // Style the dropdowns.
+    // $("select.repository_list").uniform();
+    // $.getJSON('_tests/dummyjson/searchRepositories.json', function (result) {
+    //   var repos = result.repos;
+    //   repos.unshift({id:null, name: "Select a Repository:"});
+    //   console.log(repos);
+    //   // $("select.repository_list")
+    // });
+
+
     ///////////////////////
     // Initial functions //
     ///////////////////////

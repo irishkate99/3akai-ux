@@ -552,7 +552,8 @@ button span.fl-uploader-button-text-hidden{display:none;}
     margin:8px 0;
     overflow-x:hidden;
     
-    /* Dialog */
+ 
+/* Dialog */
 .dialog_settings{background-color:#ccc;color:#333;display:none;left:50%;margin-left:-340px;position:absolute;top:20%;width:710px;}
 .jqmOverlay{background-color:#000;}
 .dialog_settings p {margin: 5px 0 5px 0;}
@@ -613,9 +614,3 @@ padding:5px;
 #contentmedia_dialog_buttons{float: left;margin:2px; padding:6px; width:60px;}
 .contentmedia_dialog_buttons_container{margin:0;padding:0;}
  
- 
- 
- 
-    overflow-y:auto;
-    padding:5px;
-}

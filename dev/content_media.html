@@ -39,7 +39,7 @@
         <div class="fl-fix fl-centered fixed-container">
             <div class="decor"><!-- -->
             </div>
-            <!-- TITLE --><h1 class="title">Find, browse and manage files</h1>
+            <!-- TITLE --><h1 class="title">Find, browse and manage resources</h1>
             <!-- CONTENT -->
             <div class="fl-centered fl-container fl-tab-content contentmedia_content_wrapper">
                 <div class="contentmedia_tab_content_top">
@@ -66,19 +66,19 @@
                     <!-- Left container -->
                     <div id="contentmedia_main_left">
                         <!-- Context Filters -->
-                        <div id="contentmedia_context_filters">
+                        <!--<div id="contentmedia_context_filters">
                             <a href="javascript:;" id="contentmedia_accordion_list_site_all">All Files (debug)<span class="contentmedia_hidden">allfiles</span></a>
                             <a href="javascript:;" id="contentmedia_context_filters_myfiles">My Files<span class="contentmedia_hidden">myfiles</span></a>
                             <a href="javascript:;">My Contacts' Files<span class="contentmedia_hidden">mycontacts</span></a>
                             <a href="javascript:;">Files On My Sites<span class="contentmedia_hidden">mysites</span></a>
                             <a href="javascript:;" id="contentmedia_accordion_list_site_bookmarks">My Bookmarked Files<span class="contentmedia_hidden">mybookmarks</span></a>
-                        </div>
+                        </div>-->
                         <!-- Accordion -->
                         <div id="contentmedia_accordion">
                             <a href="javascript:;" title="Search for files">Search</a>
                             <div id="contentmedia_search">
                                 <form>
-                                    <input type="text" value="Search for files ..." class="input" id="search_text"/>
+                                    <input type="text" value="Enter keyword(s) ..." class="input" id="search_text"/>
                                     <button id="contentmedia_search_button" class="s3d-search-button s3d-button s3d-button-primary"><span class="s3d-button-inner"><span class="s3d-button-icon-right">Search</span></span></button>
                                 </form>
                             </div>
@@ -114,14 +114,37 @@
 
                             <a href="javascript:;" title="Filter by site">Filter by site</a>
                             <div id="contentmedia_accordion_list_site">
-
                             </div>
-                            <a href="javascript:;" title="Upload new files" id="contentmedia_uploader_trigger">Upload new files</a>
-                            <div id="uploader-contents">
+                            
+                            <!--NEW FILTER OPTION. KM.-->
+                            <a href="javascript:;" title="Filter by repository">Filter by repository</a>
+                            <!--NEEDS TO BE UPDATED TO LIST REPOSITORIES ASSOCIATED WITH RESOURCE. km.-->
+                            <div><select class="repository_list">
+                            <option>Select a Repository:</option>
+                            <option>Repository 1</option>
+                            <option>Repository 2</option>
+                            <option>Repository 3</option>
+                            <option>Repository 4</option>
+                            </select></div>
+                            <br>&nbsp;<br>
+                            <br>&nbsp;<br>
+                            <!--END NEW FILTER OPTION. KM.-->
 
+                            <a href="javascript:;" title="Upload new files" id="contentmedia_uploader_trigger">Upload new resource(s)</a>
+                            <div id="uploader-contents">
+                            
+                            <!--NEW RESOURCE UPLOAD SELECTOR-->
+                            <div><select class="repository_list">
+                            <option>Select a Repository:</option>
+                            <option>Repository 1</option>
+                            <option>Repository 2</option>
+                            <option>Repository 3</option>
+                            <option>Repository 4</option>
+                            </select></div>
+                            <br>
                                 <!-- This form will be progressively enhanced by the Fluid Uploader component. -->
                                 <form method="post" enctype="multipart/form-data" class="fl-uploader fl-progEnhance-basic">
-                                    <p>Browse to upload a file.</p>
+                                    <p>Browse to upload a resource.</p>
                                     <input name="fileData" type="file" />
                                     <div><input type="submit" value="Save"/></div>
                                 </form>
@@ -136,11 +159,11 @@
 
                                         <!-- Top of the queue -->
                                         <div class="fl-uploader-queue-header">
-                                            <table cellspacing="0" cellpadding="0" summary="Headers for the file queue.">
-                                                <caption>File Upload Queue:</caption>
+                                            <table cellspacing="0" cellpadding="0" summary="Headers for the resource queue.">
+                                                <caption>Resource Upload Queue:</caption>
 
                                                     <tr>
-                                                        <th scope="col" class="fl-uploader-file-name">File Name</th>
+                                                        <th scope="col" class="fl-uploader-file-name">Resource Name</th>
                                                         <th scope="col" class="fl-uploader-file-size">Size&nbsp;&nbsp;</th>
                                                         <th scope="col" class="fl-uploader-file-actions">&nbsp;</th>
                                                     </tr>
@@ -151,17 +174,17 @@
                                         <!-- Scrollable view -->
                                         <div class="flc-scroller fl-scroller">
                                             <div class="fl-scroller-inner">
-                                                <table cellspacing="0" class="flc-uploader-queue fl-uploader-queue" summary="Queue of files to upload.">
+                                                <table cellspacing="0" class="flc-uploader-queue fl-uploader-queue" summary="Queue of resources to upload.">
                                                     <tbody>
                                                         <!-- Rows will be rendered in here. -->
 
                                                         <!-- Template markup for the file queue rows -->
                                                         <tr class="flc-uploader-file-tmplt flc-uploader-file fl-uploader-hidden-templates">
-                                                            <th class="flc-uploader-file-name fl-uploader-file-name" scope="row">File Name Placeholder</th>
+                                                            <th class="flc-uploader-file-name fl-uploader-file-name" scope="row">Resource Name Placeholder</th>
                                                             <td class="flc-uploader-file-size fl-uploader-file-size">0 KB</td>
                                                             <td class="fl-uploader-file-actions">
                                                                 <button type="button" class="flc-uploader-file-action fl-uploader-file-action" title="Remove File" tabindex="-1">
-                                                                    <span class="fl-uploader-button-text fl-uploader-hidden">Remove file from queue</span>
+                                                                    <span class="fl-uploader-button-text fl-uploader-hidden">Remove resource(s) from queue</span>
                                                                 </button>
                                                             </td>
                                                         </tr>
@@ -177,20 +200,20 @@
                                         </div>
 
                                         <div class="flc-uploader-browse-instructions fl-uploader-browse-instructions">
-                                            Choose <em>Browse files</em> to add files to the queue
+                                            Choose <em>Browse</em> to add resources to the queue
                                         </div>
 
                                         <!-- Foot of the queue -->
                                         <div class="flc-uploader-queue-footer fl-uploader-queue-footer">
-                                            <table cellspacing="0" cellpadding="0" summary="Status of file queue.">
+                                            <table cellspacing="0" cellpadding="0" summary="Status of resource queue.">
 
                                                     <tr>
                                                         <td class="flc-uploader-total-progress-text">
-                                                            Total: <span class="fl-uploader-totalFiles">0</span> files
+                                                            Total: <span class="fl-uploader-totalFiles">0</span> resources
                                                             (<span class="fl-uploader-totalBytes">0 KB</span>)
                                                         </td>
                                                         <td class=".fl-uploader-footer-buttons" align="right" >
-                                                            <a href="#" class="flc-uploader-button-browse fl-uploader-browse">Browse files</a>
+                                                            <a href="#" class="flc-uploader-button-browse fl-uploader-browse">Browse</a>
                                                         </td>
                                                     </tr>
 
@@ -201,10 +224,12 @@
 
                                     <!-- Action buttons -->
                                     <div class="fl-uploader-btns">
-                                        <button type="button" class="flc-uploader-button-pause fl-uploader-pause fl-uploader-hidden">Stop Upload</button><button type="button" class="flc-uploader-button-upload fl-uploader-upload fl-uploader-button-default fl-uploader-dim" disabled="disabled">Upload</button>
+                                        <button type="button" class="flc-uploader-button-pause fl-uploader-pause fl-uploader-hidden">Stop Upload</button>
+                                        <button type="button" class="flc-uploader-button-upload fl-uploader-upload fl-uploader-button-default fl-uploader-dim" disabled="disabled">Upload</button>
                                     </div>
                                 </form>
                             </div>
+                            <a title="link to a resource on the web" id="contentmedia_actions_link" href="javascript:;">Link to a resource on the Web</a>
                         </div>
 
                     </div>
@@ -213,8 +238,8 @@
                             <div id="contentmedia_bar_right">
                                 <a id="contentmedia_actions_view_list" href="javascript:;" title="List view">List view</a>|
                                 <a id="contentmedia_actions_view_thumbnail" href="javascript:;" title="Thumbnail view"><span>Thumbnail view</span></a>|
-                                <a id="contentmedia_actions_edit" href="javascript:;">File Settings</a>|
-                                <a id="contentmedia_actions_remove" href="javascript:;">Remove Files</a>
+                                <a id="contentmedia_actions_edit" href="javascript:;">Resource Settings</a>|
+                                <a id="contentmedia_actions_remove" href="javascript:;">Remove Resource(s)</a>
                             </div>
 
                             <!-- Filters -->
@@ -361,79 +386,102 @@
     <!-- FOOTER WIDGET -->
     <div id="widget_footer_footercontainer" class="widget_inline footercontainer"></div>
 
-    <div id="contentmedia_dialog_edit" class="dialog">
-        <div class="dialog_header">
-            <div class="dialog_header_inner">
-                <h1>Edit files</h1>
+    <div id="contentmedia_dialog_edit" class="dialog_settings">
+        <div class="dialog_settings_header">
+            <div class="dialog_settings_header_inner">
+                <h1>Resource Settings</h1>
                 <a href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog">Close Dialog</a>
             </div>
         </div>
-        <div class="dialog_content">
-            <a href="javascript:;" id="contentmedia_dialog_permissions_trigger">Permissions</a> |
-            <a href="javascript:;" id="contentmedia_dialog_associations_trigger">Site Associations</a>
+        <div class="dialog_settings_content">
+            <a href="javascript:;" id="contentmedia_dialog_permissions_trigger">Visibility & Sharing</a> |
+            <a href="javascript:;" id="contentmedia_dialog_associations_trigger">Tags</a>
 
             <div id="contentmedia_dialog_permissions">
-                <form method="get" action="#">
+                <p>Do you want other ALEX users to be able to see this resource in their Content & Media tab, and possibly reuse it?</p>
+					
+					<form method="get" action="#">
                     <input type="radio" value="public" id="contentmedia_dialog_permissions_public" name="contentmedia_dialog_permissions_options" checked="checked" />
-                    <label for="contentmedia_dialog_permissions_public">Public</label><br />
-
-                    <input type="radio" value="sharepeople" id="contentmedia_dialog_permissions_sharepeople" name="contentmedia_dialog_permissions_options" />
-                    <label for="contentmedia_dialog_permissions_sharepeople">Visible to people I share with</label><br />
-
-                    <input type="button" value="Set permissions" />
-                </form>
-            </div>
-
-            <div id="contentmedia_dialog_associations" style="display:none;">
-                <div class="contentmedia_dialog_associations_select_container">
-                    <div>All Sites</div>
-                    <select id="contentmedia_dialog_associations_select_all" size="10" multiple="multiple">
-                        <option value="/_sites/site1">site1</option>
-                        <option value="/_sites/site2">site2</option>
-                        <option value="/_sites/site3">site3</option>
-                        <option value="/_sites/site4">site4</option>
-                        <option value="/_sites/site5">site5</option>
-                        <option value="/_sites/site6">site6</option>
-                        <option value="/_sites/site7">site7</option>
-                        <option value="/_sites/site8">site8</option>
-                        <option value="/_sites/site9">site9</option>
-                        <option value="/_sites/site10">site10</option>
-                        <option value="/_sites/site11">site11</option>
-                        <option value="/_sites/site12">site12</option>
-                    </select>
-                </div>
-
-                <div id="contentmedia_dialog_associations_move_container">
-                    <a href="javascript:;" id="contentmedia_dialog_associations_move_selected" class="contentmedia_dialog_associations_move">&gt;</a>
-                    <a href="javascript:;" id="contentmedia_dialog_associations_move_all" class="contentmedia_dialog_associations_move">&lt;</a>
-                </div>
-
-                <div class="contentmedia_dialog_associations_select_container">
-                    <div>Selected Sites</div>
-                    <select id="contentmedia_dialog_associations_select_selected" size="10" multiple="multiple">
-                        <option value="/_sites/site99">site99</option>
-                    </select>
-                </div>
-
-                <input type="button" value="Set associations" class="fl-push"/>
-            </div>
-        </div>
-    <div class="dialog_footer">
-        <div class="dialog_footer_inner"><!-- --></div>
-    </div>
-    </div>
+<label for="contentmedia_dialog_permissions_public">NOT Available to the ALEX Community</label><br />
+ 
+<input type="radio" value="sharepeople" id="contentmedia_dialog_permissions_sharepeople" name="contentmedia_dialog_permissions_options" />
+<label for="contentmedia_dialog_permissions_sharepeople">Visible to the ALEX Community</label><br />
+</div>
+<div id="contentmedia_dialog_buttons">
+<input type="button" value="Next" href="javascript:;" id="contentmedia_dialog_associations_trigger"/>
+<input type="button" value="Prev" href="javascript:;" id="contentmedia_dialog_associations_trigger"/>
+<input type="button" value="Cancel" href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog"/>
+<!--clicking the following button should submit the form. km.-->
+<input type="button" value="Done" />
+</div>
+</form>
+ 
+<div id="contentmedia_dialog_associations" style="display:none;">
+<div id="contentmedia_dialog_tag_container">
+<div class="contentmedia_dialog_associations_select_container">
+<div>Your Existing Tags</div>
+<select id="contentmedia_dialog_associations_select_all" size="10" multiple="multiple">
+<option value="/_tags/tag1">tag1</option>
+<option value="/_tags/tag2">tag2</option>
+<option value="/_tags/tag3">tag3</option>
+<option value="/_tags/tag4">tag4</option>
+<option value="/_tags/tag5">tag5</option>
+<option value="/_tags/tag6">tag6</option>
+<option value="/_tags/tag7">tag7</option>
+<option value="/_tags/tag8">tag8</option>
+<option value="/_tags/tag9">tag9</option>
+<option value="/_tags/tag10">tag10</option>
+<option value="/_tags/tag11">tag11</option>
+<option value="/_tags/tag12">tag12</option>
+</select>
+</div>
+ 
+<div id="contentmedia_dialog_associations_move_container">
+<a href="javascript:;" id="contentmedia_dialog_associations_move_selected" class="contentmedia_dialog_associations_move">&gt;</a>
+<a href="javascript:;" id="contentmedia_dialog_associations_move_all" class="contentmedia_dialog_associations_move">&lt;</a>
+</div>
+ 
+<div class="contentmedia_dialog_associations_select_container">
+<div>Selected Tags</div>
+<select id="contentmedia_dialog_associations_select_selected" size="10" multiple="multiple">
+<option value="/_tags/tag99">tag99</option>
+<option value="/_tags/systemtag">systemtag</option>
+</select>
+</div>
+<form><p style="margin-left:5px;">Create a new tag: <input type="textbox" id="new_tag" size="30"> <input type="button" value="Create" href="javascript:;"></p></form>
+</div>
+<div id="contentmedia_dialog_buttons">
+<input type="button" value="Next" href="javascript:;" id="contentmedia_dialog_permissions_trigger"/>
+<input type="button" value="Prev" href="javascript:;" id="contentmedia_dialog_associations_trigger"/>
+<input type="button" value="Cancel" href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog"/>
+<!--clicking the following button should submit the form. km.-->
+<input type="button" value="Done" />
+</div>
+ 
+</div>
+ 
+<br clear="all"><p><b>Note:</b> If you just uploaded multiple resources, these settings will apply to all of them. To adjust
+individual settings, close this window then select a single resource and click Resource Settings at the top right.</p>
+</div>
+<div class="dialog_footer">
+<div class="dialog_footer_inner">
+</div>
+</div>
+</div>
+    
+    
     <div id="contentmedia_dialog_remove" class="dialog">
         <div class="dialog_header">
             <div class="dialog_header_inner">
-                <h1>Remove files</h1>
+                <h1>Remove Resource(s)</h1>
                 <a href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog">Close Dialog</a>
             </div>
         </div>
         <div class="dialog_content">
-            <span>Are you sure you want to remove the following file(s)?</span><br />
+            <span>Are you sure you want to remove the following resource(s)?</span><br />
             <div id="contentmedia_dialog_remove_list"></div>
-            <input type="button" value="yes" id="contentmedia_dialog_remove_confirm" />
             <input type="button" value="no" id="contentmedia_dialog_remove_decline" />
+            <input type="button" value="yes" id="contentmedia_dialog_remove_confirm" />
             <div id="contentmedia_dialog_remove_list_template"><!--
                 {for file in items}
                     <div class="contentmedia_dialog_remove_file">
@@ -450,6 +498,41 @@
             <div class="dialog_footer_inner"><!-- --></div>
         </div>
     </div>
+    
+    <!--new dialog to handle Link to a resource on the Web option. km.-->
+<div id="contentmedia_dialog_link" class="dialog">
+<div class="dialog_header">
+<div class="dialog_header_inner">
+<h1>Link to a Resource on the Web</h1>
+<a href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog">Close Dialog</a>
+</div>
+</div>
+<div class="contentmedia_dialog_body">
+<form method="get" action="#">
+<p>Where would you like to save this link?
+<div><select class="repository_list">
+<option>Select a Repository:</option>
+<option>Repository 1</option>
+<option>Repository 2</option>
+<option>Repository 3</option>
+<option>Repository 4</option>
+</select></div>
+</p>
+<br>
+<p>Enter the URL of the resource:<br>
+<input type="text" value="http://wwww.sample.url/" class="input" id="link_url"/></p>
+<p>Give this resource a name:<br />
+<input type="text" value="Sample Name" class="input" id="link_name"/></p>
+<input type="button" value="Cancel" href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog"/>
+<!--clicking the following button should submit the form. km.-->
+<input type="button" value="OK" href="javascript:;" />
+</form>
+</div>
+<div class="dialog_footer">
+<div class="dialog_footer_inner">
+</div>
+</div>
+</div>
     <script type="text/javascript" language="JavaScript" src="_javascript/contentmedia.js"></script>
 </body>
 </html>

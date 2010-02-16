@@ -15,10 +15,10 @@
  * KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-
+ 
 /* General */
 .contentmedia_hidden {
-    display: none;
+display: none;
 }
 .contentmedia_disabled {
     color: #eee !important;
@@ -260,6 +260,9 @@
     float: right;
 }
 
+/*#contentmedia_search_button {background: #454a4f url('../../_images/search_button.png') top left no-repeat;border: none;color: #fff;display: block;height: 23px;margin: 0.8em 0 1.2em;padding: 0;width: 88px; float: right; }
+#contentmedia_search_button span {position:absolute;top:-9999px;left:-9999px;}*/
+
 /* List */
 .contentmedia_list_heading {
     color: #454A4F;
@@ -429,47 +432,11 @@
     text-align: center;
 }
 
-/* Dialog */
-.contentmedia-container .dialog_content form {
-    padding: 4px;
-}
-.contentmedia-container .dialog_content input {
-    margin: 5px 0;
-}
-#contentmedia_dialog_associations_move_container {
-    float: left;
-}
-.contentmedia_dialog_associations_move {
-    display: block;
-    font-size: 1.2em;
-    margin-top: 36px;
-    padding: 0.5em;
-}
-.contentmedia_dialog_associations_move:hover {
-    background: #fff;
-}
-.contentmedia_dialog_associations_select_container{
-    float: left;
-    margin: 8px;
-}
-.contentmedia_dialog_associations_select_container select {
-    width: 197px;
-}
-
-#contentmedia_dialog_remove_list {
-    background: #fff;
-    height:150px;
-    margin:8px 0;
-    overflow-x:hidden;
-    overflow-y:auto;
-    padding:5px;
-}
-
 /* Override Fluid */
 .fl-tab-content {
     border: none;
 }
-
+ 
 /* Uploader */
 #uploader-contents {overflow:auto;}
 .fl-uploader{width:228px;position:relative;display:block;clear:both;}
@@ -547,3 +514,108 @@ button span.fl-uploader-button-text-hidden{display:none;}
 .fl-uploader-total-progress-errored{background-image:url('/dev/_images/uploader/gradient-total-yellow.png');border-right:1px solid #E8C81C;background-color:#F6ECA0;}
 .fl-uploader-flash9-container{overflow:hidden;width:1px;height:1px;}
 .hideUploaderForOpera{visibility:hidden;overflow:hidden;height:0;width:0;padding:0;}
+
+/* ----------------------------------------------------------------------------
+* DIALOGS  (some duplicated from saki.base.css for local tweaking)
+* ----------------------------------------------------------------------------
+*/
+/* Dialog */
+.contentmedia-container .dialog_content form {
+    padding: 4px;
+}
+.contentmedia-container .dialog_content input {
+    margin: 5px 0;
+}
+#contentmedia_dialog_associations_move_container {
+    float: left;
+}
+.contentmedia_dialog_associations_move {
+    display: block;
+    font-size: 1.2em;
+    margin-top: 36px;
+    padding: 0.5em;
+}
+.contentmedia_dialog_associations_move:hover {
+    background: #fff;
+}
+.contentmedia_dialog_associations_select_container{
+    float: left;
+    margin: 8px;
+}
+.contentmedia_dialog_associations_select_container select {
+    width: 197px;
+}
+
+#contentmedia_dialog_remove_list {
+    background: #fff;
+    height:150px;
+    margin:8px 0;
+    overflow-x:hidden;
+    
+    /* Dialog */
+.dialog_settings{background-color:#ccc;color:#333;display:none;left:50%;margin-left:-340px;position:absolute;top:20%;width:710px;}
+.jqmOverlay{background-color:#000;}
+.dialog_settings p {margin: 5px 0 5px 0;}
+ 
+ 
+/* Dialog header */
+.dialog_settings_header{background:url(/dev/_images/dialog_tr.png) top right no-repeat;padding:0 4px 0 0;}
+.dialog_settings_header_inner{background:url(/dev/_images/dialog_tl.png) top left no-repeat;}
+.dialog_settings_header h1{color:#fff;display:block;font-size:1.1em;margin:0;padding:15px 20px;}
+.dialog_settings_header .dialog_close_image{background:url(/dev/_images/close_dialog.png) no-repeat top right;cursor:pointer;display:block;height:15px;overflow:hidden;position:absolute;right:20px;top:17px;text-indent:-5000px;width:14px;}
+ 
+/* Dialog content */
+.dialog_settings_content{background-color:#eee;border-left:3px #454a4f solid;border-right:3px #454a4f solid;padding:20px 20px 5px 20px;}
+.dialog_content h1{font-size:1.1em;font-weight:bold;color:#333;margin:0;padding:5px 0;}
+.dialog_content textarea {height:80px;width:98%;}
+ 
+/* Dialog buttons */
+.dialog_buttons{clear:both;margin-top:20px;}
+.dialog_buttons .button,.dialog_buttons .button-default{background:#FFF url(/dev/_images/custom_button_gradient.png) repeat-x scroll center bottom;border:1px solid #CCC;display:inline;float:none;font-weight:normal;cursor:pointer;padding:3px 8px;width:auto}
+.dialog_buttons .button-default{color:#222;}
+ 
+/* Dialog footer */
+.dialog_footer{background:url(/dev/_images/dialog_br.png) top right no-repeat;padding:0 8px 0 0;}
+.dialog_footer_inner{background:url(/dev/_images/dialog_bl.png) top left no-repeat;height:6px;}
+ 
+.contentmedia_dialog_body {margin: 10px 20px 20px 20px;}
+.contentmedia_dialog_body .input{width: 450px;}
+.contentmedia-container .dialog_settings_content form {padding: 4px;}
+.contentmedia-container .dialog_settings_content input {margin: 5px 0;}
+ 
+#contentmedia_dialog_tag_container{background-color:#fff;float:left;margin:2px 10px 2px 0; padding:0; width:427px;height:223px;border:1px solid #ccc;}
+#contentmedia_dialog_associations_move_container {float: left;}
+.contentmedia_dialog_associations_move {
+display: block;
+font-size: 1.2em;
+margin-top: 36px;
+padding: 0.5em;
+}
+.contentmedia_dialog_associations_move:hover {background: #fff;}
+.contentmedia_dialog_associations_select_container{float: left;margin: 8px; }
+.contentmedia_dialog_associations_select_container select {width: 175px;}
+ 
+#contentmedia_dialog_remove_list {
+background: #fff;
+height:150px;
+margin:8px 0;
+overflow-x:hidden;
+overflow-y:auto;
+padding:5px;
+}
+ 
+ 
+.contentmedia_dialog_nav_container{background-color:#fff; float:left;margin:2px 10px 2px 0; padding:3px 0 0 0;width:135px;height:220px;border:1px solid #ccc;}
+.contentmedia_dialog_nav_container a, .contentmedia_dialog_nav_container a:link, .contentmedia_dialog_nav_container a:active, .contentmedia_dialog_nav_container a:visited {color:#006E96; background:#fff; display:block;line-height:auto;padding:3px 6px 6px 6px;}
+.contentmedia_dialog_nav_container a:hover {color:#006E96; background:#ddd;padding:6px 6px 6px 6px;margin-top:-3px;}
+ 
+#contentmedia_dialog_permissions{background-color:#fff;float:left;margin:2px 10px 2px 0; padding:6px; width:415px;height:211px;border:1px solid #ccc;}
+#contentmedia_dialog_buttons{float: left;margin:2px; padding:6px; width:60px;}
+.contentmedia_dialog_buttons_container{margin:0;padding:0;}
+ 
+ 
+ 
+ 
+    overflow-y:auto;
+    padding:5px;
+}

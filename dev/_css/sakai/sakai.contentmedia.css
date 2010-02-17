@@ -567,12 +567,12 @@ button span.fl-uploader-button-text-hidden{display:none;}
  
 /* Dialog content */
 .dialog_settings_content{background-color:#eee;border-left:3px #454a4f solid;border-right:3px #454a4f solid;padding:20px 20px 5px 20px;}
-.dialog_content{background-color:#eee;border-left:3px #454a4f solid;border-right:3px #454a4f solid;padding:20px 20px 5px 20px;}
+/*.dialog_content{background-color:#eee;border-left:3px #454a4f solid;border-right:3px #454a4f solid;padding:20px 20px 5px 20px;}*/
 .dialog_content h1{font-size:1.1em;font-weight:bold;color:#333;margin:0;padding:5px 0;}
 .dialog_content textarea {height:80px;width:98%;}
  
 /* Dialog buttons */
-.dialog_buttons{clear:both;margin-top:20px;}
+.dialog_buttons{margin-left:175px;margin-top:10px;}
 .dialog_buttons .button,.dialog_buttons .button-default{background:#FFF url(/dev/_images/custom_button_gradient.png) repeat-x scroll center bottom;border:1px solid #CCC;display:inline;float:none;font-weight:normal;cursor:pointer;padding:3px 8px;width:auto}
 .dialog_buttons .button-default{color:#222;}
  
@@ -580,6 +580,7 @@ button span.fl-uploader-button-text-hidden{display:none;}
 .dialog_footer{background:url(/dev/_images/dialog_br.png) top right no-repeat;padding:0 8px 0 0;}
 .dialog_footer_inner{background:url(/dev/_images/dialog_bl.png) top left no-repeat;height:6px;}
 
+.contentmedia_dialog_body {background-color:#eee;border-left:3px #454a4f solid;border-right:3px #454a4f solid;padding:20px 20px 5px 20px;}
 .contentmedia_dialog_body .input{width: 450px;}
 .contentmedia-container .dialog_settings_content form {padding: 4px;}
 .contentmedia-container .dialog_settings_content input {margin: 5px 0;}

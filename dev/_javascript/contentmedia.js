@@ -1544,3 +1544,11 @@ sakai.contentmedia = function(){
 };
 
 sdata.container.registerForLoad("sakai.contentmedia");
+
+
+//Clear dialog text boxes on focus KM
+
+function clearText(thefield){
+if (thefield.defaultValue==thefield.value)
+thefield.value = ""
+} 

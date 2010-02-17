@@ -1139,13 +1139,18 @@ sakai.contentmedia = function(){
 
     // Style the dropdowns.
     $("select.repository_list").uniform();
-    $.getJSON('_tests/dummyjson/searchRepositories.json', function (result) {
-      var repos = result.repos;
-      repos.unshift({id:null, name: "Select a Repository:"});
-      console.log(repos);
-      // $("select.repository_list")
-    });
 
+    // Get Repository list from server.
+    $.getJSON('/dev/dummyjson/searchRepositories.json', function (json) {
+      json.results.unshift({title: "Select a Repository:"});
+      $("select.repository_list").each(function (i, select) {
+        select = $(select).empty();
+        $.each(json.results, function (i, repo) {
+          select.append($(document.createElement("option")).attr({selected: repo.id == json.default, title: repo.description, value:repo.id}).text(repo.title));
+        });
+      });
+      $.uniform.update();
+    });
 
     ///////////////////////
     // Initial functions //

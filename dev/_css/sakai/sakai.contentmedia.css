@@ -551,7 +551,7 @@ button span.fl-uploader-button-text-hidden{display:none;}
     height:150px;
     margin:8px 0;
     overflow-x:hidden;
-    
+}    
  
 /* Dialog */
 .dialog_settings{background-color:#ccc;color:#333;display:none;left:50%;margin-left:-340px;position:absolute;top:20%;width:710px;}
@@ -578,8 +578,8 @@ button span.fl-uploader-button-text-hidden{display:none;}
 /* Dialog footer */
 .dialog_footer{background:url(/dev/_images/dialog_br.png) top right no-repeat;padding:0 8px 0 0;}
 .dialog_footer_inner{background:url(/dev/_images/dialog_bl.png) top left no-repeat;height:6px;}
- 
-.contentmedia_dialog_body {margin: 10px 20px 20px 20px;}
+
+.contentmedia_dialog_body {background-color:#eee;padding: 10px 20px 20px 20px;}
 .contentmedia_dialog_body .input{width: 450px;}
 .contentmedia-container .dialog_settings_content form {padding: 4px;}
 .contentmedia-container .dialog_settings_content input {margin: 5px 0;}

@@ -1146,7 +1146,7 @@ sakai.contentmedia = function(){
       $("select.repository_list").each(function (i, select) {
         select = $(select).empty();
         $.each(json.results, function (i, repo) {
-          select.append($(document.createElement("option")).attr({selected: repo.id == json.default, title: repo.description, value:repo.id}).text(repo.title));
+          select.append($(document.createElement("option")).attr({selected: repo.id == json['default'], title: repo.description, value:repo.id}).text(repo.title));
         });
       });
       $.uniform.update();

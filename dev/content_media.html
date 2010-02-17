@@ -143,7 +143,6 @@
                             <option>Repository 3</option>
                             <option>Repository 4</option>
                             </select></div>
-                            <br>
                                 <!-- This form will be progressively enhanced by the Fluid Uploader component. -->
                                 <form method="post" enctype="multipart/form-data" class="fl-uploader fl-progEnhance-basic">
                                     <p>Browse to upload a resource.</p>
@@ -509,10 +508,14 @@ individual settings, close this window then select a single resource and click R
 <a href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog">Close Dialog</a>
 </div>
 </div>
-<div class="dialog_content">
 <div class="contentmedia_dialog_body">
 <form method="get" action="#">
-<p>Where would you like to save this link?
+<p>Enter a URL to embed an image, video, or other resource from the Web:<br>
+<input type="text" value="http://wwww.sample.url/" class="input" id="link_url" onFocus="clearText(this)"/></p>
+<p>Give this linked resource a name:<br />
+<input type="text" value="Sample Name" class="input" id="link_name" onFocus="clearText(this)"/></p>
+
+<p>Where would you like to save a record of this linked resource?
 <div><select class="repository_list">
 <option>Select a Repository:</option>
 <option>Repository 1</option>
@@ -521,16 +524,12 @@ individual settings, close this window then select a single resource and click R
 <option>Repository 4</option>
 </select></div>
 </p>
-<br>
-<p>Enter the URL of the resource:<br>
-<input type="text" value="http://wwww.sample.url/" class="input" id="link_url"/></p>
-<p>Give this resource a name:<br />
-<input type="text" value="Sample Name" class="input" id="link_name"/></p>
-<input type="button" value="Cancel" href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog"/>
+<div class="dialog_buttons">
+<input type="button" value="Cancel" href="javascript:;" class="jqmClose dialog_buttons" title="Close Dialog"/>
 <!--clicking the following button should submit the form. km.-->
 <input type="button" value="OK" href="javascript:;" />
-</form>
 </div>
+</form>
 </div>
 <div class="dialog_footer">
 <div class="dialog_footer_inner">

@@ -100,6 +100,7 @@ sakai.contentmedia = function(){
     // Dialogs
     var contentmediaDialog = contentmediaId + "_dialog";
     var contentmediaDialogAssociations = contentmediaDialog + "_associations";
+    var contentmediaDialogButtons = contentmediaDialog + "_buttons";
     var contentmediaDialogAssociationsMove = contentmediaDialogAssociations + "_move";
     var contentmediaDialogAssociationsMoveAll = contentmediaDialogAssociationsMove + "_all";
     var contentmediaDialogAssociationsMoveSelected = contentmediaDialogAssociationsMove + "_selected";
@@ -1024,6 +1025,11 @@ sakai.contentmedia = function(){
     $(contentmediaDialogPermissionsTrigger).live("click", function(){
         $(contentmediaDialogAssociations).hide();
         $(contentmediaDialogPermissions).show();
+        $(contentmediaDialogButtons).show(); //km added to show buttons
+        window.document.getElementById('contentmedia_dialog_permissions_trigger').style.fontWeight = 'bold';//km added to toggle nav menu style
+        window.document.getElementById('contentmedia_dialog_permissions_trigger').style.background = '#ddd';
+        window.document.getElementById('contentmedia_dialog_associations_trigger').style.fontWeight = 'normal';
+        window.document.getElementById('contentmedia_dialog_associations_trigger').style.background = '#fff';
     });
 
     /**
@@ -1032,6 +1038,11 @@ sakai.contentmedia = function(){
     $(contentmediaDialogAssociationsTrigger).live("click", function(){
         $(contentmediaDialogPermissions).hide();
         $(contentmediaDialogAssociations).show();
+        $(contentmediaDialogButtons).hide(); //km added to hide buttons
+		window.document.getElementById('contentmedia_dialog_associations_trigger').style.fontWeight = 'bold';//km added to toggle nav menu style
+		window.document.getElementById('contentmedia_dialog_associations_trigger').style.background = '#ddd';
+		window.document.getElementById('contentmedia_dialog_permissions_trigger').style.fontWeight = 'normal';
+		window.document.getElementById('contentmedia_dialog_permissions_trigger').style.background = '#fff';
     });
 
     /**
@@ -1281,6 +1292,9 @@ sakai.contentmedia = function(){
             onShow: renderEdit
         });
 
+		window.document.getElementById('contentmedia_dialog_permissions_trigger').style.fontWeight = 'bold';//km added to highlight permissions nav menu item upon opening dialog
+		window.document.getElementById('contentmedia_dialog_permissions_trigger').style.background = '#ddd';
+        
         $(contentmediaDialogEdit).jqmAddClose('.jqmClose');
 
 

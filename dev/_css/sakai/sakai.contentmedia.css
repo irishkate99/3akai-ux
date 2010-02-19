@@ -608,8 +608,8 @@ padding:5px;
  
  
 .contentmedia_dialog_nav_container{background-color:#fff; float:left;margin:2px 10px 2px 0; padding:3px 0 0 0;width:135px;height:220px;border:1px solid #ccc;}
-.contentmedia_dialog_nav_container a, .contentmedia_dialog_nav_container a:link, .contentmedia_dialog_nav_container a:active, .contentmedia_dialog_nav_container a:visited {color:#006E96; background:#fff; display:block;line-height:auto;padding:3px 6px 6px 6px;}
-.contentmedia_dialog_nav_container a:hover {color:#006E96; background:#ddd;padding:6px 6px 6px 6px;margin-top:-3px;}
+.contentmedia_dialog_nav_container a, .contentmedia_dialog_nav_container a:link, .contentmedia_dialog_nav_container a:active, .contentmedia_dialog_nav_container a:visited {color:#006E96; background:#fff; display:block;line-height:auto;padding:6px 6px 6px 6px;margin-top:-3px;}
+.contentmedia_dialog_nav_container a:hover {color:#006E96; background:#ddd;padding:6px 6px 6px 6px;}
  
 #contentmedia_dialog_permissions{background-color:#fff;float:left;margin:2px 10px 2px 0; padding:6px; width:415px;height:211px;border:1px solid #ccc;}
 #contentmedia_dialog_buttons{float: left;margin:2px; padding:6px; width:60px;}

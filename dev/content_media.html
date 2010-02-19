@@ -395,8 +395,10 @@
             </div>
         </div>
         <div class="dialog_settings_content">
-            <a href="javascript:;" id="contentmedia_dialog_permissions_trigger">Visibility & Sharing</a> |
+            <div class="contentmedia_dialog_nav_container">
+            <a href="javascript:;" id="contentmedia_dialog_permissions_trigger">Visibility & Sharing</a>
             <a href="javascript:;" id="contentmedia_dialog_associations_trigger">Tags</a>
+            </div>
 
             <div id="contentmedia_dialog_permissions">
                 <p>Do you want other ALEX users to be able to see this resource in their Content & Media tab, and possibly reuse it?</p>
@@ -410,10 +412,10 @@
 </div>
 <div id="contentmedia_dialog_buttons">
 <input type="button" value="Next" href="javascript:;" id="contentmedia_dialog_associations_trigger"/>
-<input type="button" value="Prev" href="javascript:;" id="contentmedia_dialog_associations_trigger"/>
+<!--<input type="button" value="Prev" href="javascript:;" id="contentmedia_dialog_associations_trigger"/>-->
 <input type="button" value="Cancel" href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog"/>
 <!--clicking the following button should submit the form. km.-->
-<input type="button" value="Done" />
+<input type="button" value="Done" class="jqmClose dialog_close_image" title="Done"/>
 </div>
 </form>
  
@@ -453,10 +455,10 @@
 </div>
 <div id="contentmedia_dialog_buttons">
 <input type="button" value="Next" href="javascript:;" id="contentmedia_dialog_permissions_trigger"/>
-<input type="button" value="Prev" href="javascript:;" id="contentmedia_dialog_associations_trigger"/>
+<!--<input type="button" value="Prev" href="javascript:;" id="contentmedia_dialog_associations_trigger"/>-->
 <input type="button" value="Cancel" href="javascript:;" class="jqmClose dialog_close_image" title="Close Dialog"/>
 <!--clicking the following button should submit the form. km.-->
-<input type="button" value="Done" />
+<input type="button" value="Done" class="jqmClose dialog_close_image" title="Done"/>
 </div>
  
 </div>
@@ -481,8 +483,8 @@ individual settings, close this window then select a single resource and click R
         <div class="dialog_content">
             <span>Are you sure you want to remove the following resource(s)?</span><br />
             <div id="contentmedia_dialog_remove_list"></div>
-            <input type="button" value="no" id="contentmedia_dialog_remove_decline" />
-            <input type="button" value="yes" id="contentmedia_dialog_remove_confirm" />
+            <input type="button" value="Cancel" id="contentmedia_dialog_remove_decline" />
+            <input type="button" value="Remove Resource(s)" id="contentmedia_dialog_remove_confirm" />
             <div id="contentmedia_dialog_remove_list_template"><!--
                 {for file in items}
                     <div class="contentmedia_dialog_remove_file">
@@ -511,7 +513,7 @@ individual settings, close this window then select a single resource and click R
 <div class="contentmedia_dialog_body">
 <form method="get" action="#">
 <p>Enter a URL to embed an image, video, or other resource from the Web:<br>
-<input type="text" value="http://wwww.sample.url/" class="input" id="link_url" onFocus="clearText(this)"/></p>
+<input type="text" value="http://www.myimage.jpg" class="input" id="link_url" onClick="clearText(this)"/></p>
 <p>Give this linked resource a name:<br />
 <input type="text" value="Sample Name" class="input" id="link_name" onFocus="clearText(this)"/></p>
 

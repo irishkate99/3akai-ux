@@ -1140,16 +1140,15 @@ sakai.contentmedia = function(){
     // Style the dropdowns.
     $("select.repository_list").uniform();
 
-    // Get Repository list from server.
-    $.getJSON('/dev/dummyjson/searchRepositories.json', function (json) {
-      json.results.unshift({title: "Select a Repository:"});
-      $("select.repository_list").each(function (i, select) {
-        select = $(select).empty();
-        $.each(json.results, function (i, repo) {
-          select.append($(document.createElement("option")).attr({selected: repo.id == json['default'], title: repo.description, value:repo.id}).text(repo.title));
-        });
-      });
-      $.uniform.update();
+    // Get tag list from server.
+    $.getJSON('/dev/dummyjson/allTags.json', function (json) {
+
+      // Populate the list of available tags
+      window.Bound.repos = $("select.repository_list").binder({
+        options: json.repositories,
+        defaultRepo: json.defaultRepository
+      }, dropdown_renderer);
+
     });
 
     ///////////////////////
@@ -1549,6 +1548,44 @@ sdata.container.registerForLoad("sakai.contentmedia");
 //Clear dialog text boxes on focus KM
 
 function clearText(thefield){
-if (thefield.defaultValue==thefield.value)
-thefield.value = ""
+  if (thefield.defaultValue==thefield.value)
+  thefield.value = ""
 } 
+
+// Tiny jQuery plugin to bind values to stuff.
+$.fn.binder = function binder(initial_value, renderer) {
+  var value = initial_value;
+  var match = this;
+  function update() {
+    renderer(match, value);
+  }
+  update();
+  return {
+    update: update,
+    value: value
+  }
+}
+
+
+// All bound variables will be attached to this global variable
+window.Bound = {};
+
+// Renderer callback for the various repository dropdowns
+function dropdown_renderer(selects, data) {
+  var options = data.options.slice();
+  options.unshift({id: "", title: "Select a Repository:"});
+  selects.each(function (i, select) {
+    var value = select.value || data.defaultRepo;
+    select = $(select).empty();
+    $.each(options, function (i, repo) {
+      var option = $(document.createElement("option")).attr({
+        selected: repo.id === value,
+        title: repo.description,
+        value: repo.id
+      }).text(repo.title);
+      select.append(option);
+    });
+  });
+  $.uniform.update(selects);
+}
+

@@ -1140,16 +1140,8 @@ sakai.contentmedia = function(){
     // Style the dropdowns.
     $("select.repository_list").uniform();
 
-    // Get tag list from server.
-    $.getJSON('/dev/dummyjson/allTags.json', function (json) {
-
-      // Populate the list of available tags
-      window.Bound.repos = $("select.repository_list").binder({
-        options: json.repositories,
-        defaultRepo: json.defaultRepository
-      }, dropdown_renderer);
-
-    });
+    // Get tag list from server and populate into page.
+    $.getJSON('/dev/dummyjson/allTags.json', renderAllTags)
 
     ///////////////////////
     // Initial functions //
@@ -1552,40 +1544,43 @@ function clearText(thefield){
   thefield.value = ""
 } 
 
-// Tiny jQuery plugin to bind values to stuff.
-$.fn.binder = function binder(initial_value, renderer) {
-  var value = initial_value;
-  var match = this;
-  function update() {
-    renderer(match, value);
-  }
-  update();
-  return {
-    update: update,
-    value: value
-  }
+function renderAllTags(data) {
+  // Put real data in the repository dropdowns
+  window.repos = dropdownRenderer($('select.repository_list'), {
+    options: data.repositories,
+    value: data.defaultRepository
+  });
+  
+  // window.tags = $("select#contentmedia_dialog_associations_select_all")
 }
 
-
-// All bound variables will be attached to this global variable
-window.Bound = {};
-
-// Renderer callback for the various repository dropdowns
-function dropdown_renderer(selects, data) {
-  var options = data.options.slice();
-  options.unshift({id: "", title: "Select a Repository:"});
-  selects.each(function (i, select) {
-    var value = select.value || data.defaultRepo;
-    select = $(select).empty();
-    $.each(options, function (i, repo) {
-      var option = $(document.createElement("option")).attr({
-        selected: repo.id === value,
-        title: repo.description,
-        value: repo.id
-      }).text(repo.title);
-      select.append(option);
+// Hook up the repository dropdowns
+function dropdownRenderer(selects, data) {
+  
+  // Re-render the drop-down lists, preserving the selected option.
+  function update() {
+    var options = data.options.slice();
+    options.unshift({id: "", title: "Select a Repository:"});
+    selects.each(function (i, select) {
+      var value = select.value || data.value;
+      select = $(select).empty();
+      $.each(options, function (i, repo) {
+        var option = $(document.createElement("option")).attr({
+          selected: repo.id === value,
+          title: repo.description,
+          value: repo.id
+        }).text(repo.title);
+        select.append(option);
+      });
     });
-  });
-  $.uniform.update(selects);
+    $.uniform.update(selects);
+  }
+  update();
+
+  // Not much to do here, just expose value and update.
+  return {
+    value: data,
+    update: update
+  }
 }
 
